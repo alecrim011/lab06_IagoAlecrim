@@ -1,0 +1,25 @@
+package hehe;
+
+public class Veterano extends Usuario {
+	private int x2p = 1000;
+
+	public Veterano(String nome, double dinheiro) {
+		super(nome, dinheiro);
+		x2p = 1000;
+	}
+
+	@Override
+	boolean compraJogo(Jogo j) {
+		if(super.getDinheiro() >= j.getPreco()){
+			double sobra = super.getDinheiro() - j.getPreco()*0.8;
+			super.setDinheiro(sobra);
+			x2p += j.getPreco() * 15;
+			adicionaJogo(j);
+		}
+		
+		return false;
+		
+	}
+	
+
+}

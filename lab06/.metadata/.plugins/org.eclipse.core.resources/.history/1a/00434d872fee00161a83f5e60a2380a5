@@ -1,0 +1,16 @@
+package hehe;
+
+public class teste {
+	
+	public static void main(String[] args){
+		Noob n = new Noob("ronaldo", 1000);
+		Jogo j = new Jogo("the last of us", 250);
+		
+		n.compraJogo(j);
+		
+		System.out.println(n.getJogosComprados());
+		
+		
+	}
+
+}

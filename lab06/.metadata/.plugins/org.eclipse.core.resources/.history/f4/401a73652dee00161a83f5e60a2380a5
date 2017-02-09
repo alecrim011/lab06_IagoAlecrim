@@ -1,0 +1,98 @@
+package hehe;
+
+public class Jogo {
+	private String nome;
+	private int preco;
+	private int qtdJogada = 0;
+	private int maiorScore = 0;
+	private int qtdZerou = 0;
+	
+	public Jogo(String nome, int preco){
+		nome = this.nome;
+		preco = this.preco;
+		qtdJogada = 0;
+		maiorScore = 0;
+		qtdZerou = 0;
+				
+	}
+	
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public int getPreco() {
+		return preco;
+	}
+
+
+
+	public void setPreco(int preco) {
+		this.preco = preco;
+	}
+
+
+
+	public int getQtdJogada() {
+		return qtdJogada;
+	}
+
+
+
+	public void setQtdJogada(int qtdJogada) {
+		this.qtdJogada = qtdJogada;
+	}
+
+
+
+	public int getMaiorScore() {
+		return maiorScore;
+	}
+
+
+
+	public void setMaiorScore(int maiorScore) {
+		this.maiorScore = maiorScore;
+	}
+
+
+
+	public int getQtdZerou() {
+		return qtdZerou;
+	}
+
+
+
+	public void setQtdZerou(int qtdZerou) {
+		this.qtdZerou = qtdZerou;
+	}
+
+
+
+	public int registraJogada(int score, boolean zerou){
+		if (score > maiorScore){
+			maiorScore = score;
+			
+		
+		
+		}
+		return maiorScore;
+		
+		
+	
+	
+	}
+	
+	
+	
+
+}

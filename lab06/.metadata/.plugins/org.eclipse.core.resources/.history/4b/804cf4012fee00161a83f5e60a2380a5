@@ -1,0 +1,60 @@
+package hehe;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public abstract class Usuario {
+	private String nome;
+	private double dinheiro;
+	private Set <Jogo> jogosComprados;
+	
+	
+	
+	public Usuario(String nome, double dinheiro){
+		nome = this.nome;
+		dinheiro = this.dinheiro;
+		jogosComprados = new HashSet<Jogo>();
+	}
+	
+	public void adicionaJogo(Jogo j){
+		jogosComprados.add(j);
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public double getDinheiro() {
+		return dinheiro;
+	}
+
+
+
+	public void setDinheiro(double sobra) {
+		this.dinheiro = sobra;
+	}
+
+
+
+	abstract boolean compraJogo(Jogo j);
+	
+	public void getJogosComprados(){
+		for (Jogo jogo : jogosComprados) {
+			System.out.println(jogo.getNome());
+		}
+	}
+
+
+
+	
+	
+
+}
